@@ -1,0 +1,121 @@
+1:
+from tkinter import *
+
+root = Tk()
+
+root.title('hello world')
+
+root.geometry('500x500')
+
+root.configure(background='#EEEEEE')
+
+hwL = Label(root, text='Hello World!!', bg='red', font='Times 25 bold')
+
+hwL.pack()
+
+exitB = Button(root, text='EXIT', bg='blue', font='Arial 20 bold', 
+command=root.destroy)
+
+exitB.pack(fill=X, side=BOTTOM)
+
+root.mainloop()
+
+2:
+from tkinter import *
+
+
+def display():
+
+    txt = Label(root, text='First GUI', bg='red', font='Times 15 bold ')
+    txt.pack()
+
+
+
+root = Tk()
+
+root.title('assignment')
+
+root.geometry('500x500')
+
+root.configure(background='#EEEEEE')
+
+hwL = Label(root, text='Hello World!!', bg='blue', font='Ariel 15 bold 
+')
+
+hwL.pack(fill=X, side=TOP)
+
+dispB = Button(root, text='Submit', bg='yellow', font='Times 15 bold ', 
+command=display)
+
+
+exitB = Button(root, text='EXIT', bg='blue', font='Times 15 bold', 
+command=root.destroy)
+
+exitB.pack(fill=X, side=BOTTOM)
+dispB.pack(side=BOTTOM)
+
+
+root.mainloop()
+
+3:
+from tkinter import *
+global hwL
+def change():
+
+   hwL.config( text='RITU PARIJAT', bg='green', font='Times 15 bold ')
+
+   hwL.pack()
+
+root = Tk()
+
+root.title('My App')
+
+root.geometry('300x300')
+
+root.configure(background='#EEEEEE')
+frame=Frame(root,bg='black')
+frame.pack()
+#global hwL
+hwL = Label(frame, text='RITU', bg='red', font='Ariel 15 bold ')
+hwL.pack(fill=X, side=TOP)
+
+exitB = Button(frame, text='EXIT', command=root.destroy, bg='blue', 
+font='Times 15 bold ')
+
+changeB = Button(root, text= 'CHANGE', command=change, bg='yellow', 
+font='Times 15 bold ')
+exitB.pack(fill=X,side=BOTTOM)
+changeB.pack(side=BOTTOM)
+
+frame.mainloop()
+
+root.mainloop()
+
+4:
+from tkinter import *
+
+
+def display():
+
+    print(textI.get())
+
+
+
+root = Tk()
+root.title('assignment')
+root.geometry('500x500')
+
+
+textI = Label(root, text='Enter Input ')
+textI.grid(row=1, column=1, sticky=E)
+
+
+
+textI = Entry(root)
+textI.grid(row=1, column=2)
+
+displayB = Button(root, text='DISPLAY', command=display)
+
+displayB.grid(row=3, columnspan=2, sticky=W)
+root.mainloop()
+
